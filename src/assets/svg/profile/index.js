@@ -1,0 +1,1 @@
+export {ReactComponent as FriendsIcon} from "./friends.svg";

@@ -1,0 +1,21 @@
+@import '../../styles/index.scss';
+
+.button {
+    @include flex;
+    @include Roboto;
+    padding: 8px;
+    border-radius: $border-radius;
+    font-size: 24px;
+    transition: 0.4s ease;
+    &.yellow {
+        background-color: $accent-1;
+    }
+    &.orange {
+        background-color: $accent-2;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        filter:grayscale(1);
+    }
+}
+
