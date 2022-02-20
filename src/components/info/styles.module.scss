@@ -1,0 +1,14 @@
+.info {
+    max-width: 100%;
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 5px;
+    &_feature {
+        text-decoration: underline;
+        display: inline-block;
+    }
+    &_content {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,10 @@
+.text {
+    font-size: 48px;
+    margin-bottom: 10px;
+    &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        background: black;
+    }
+}

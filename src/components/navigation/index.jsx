@@ -4,4 +4,4 @@ const Navigation = (props) => {
 return <NavigationUi/>
 }
 
-export default NavigationUi;
+export default Navigation;

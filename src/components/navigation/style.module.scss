@@ -1,0 +1,13 @@
+@import "../../styles/index.scss";
+
+.nav {
+    padding-top: 20px;
+    min-width: 100px;
+    background-color: green;
+    @include flex(flex-start, center, column, nowrap, 0);
+    &_link {
+        @include Roboto;
+        font-size: 20px;
+        margin: 5px auto;
+    }
+}
