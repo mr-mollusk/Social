@@ -5,7 +5,6 @@ const PostsUi = ({ className }) => {
     return (
         <div className={className}>
             <PostInput />
-            <Button text="send"/>
         </div>
     );
 };

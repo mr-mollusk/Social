@@ -4,3 +4,4 @@ export {default as Posts} from "./posts";
 export {default as Avatar} from "./avatar";
 export {default as Information} from "./information";
 export {default as Interaction} from "./interaction";
+export {default as Post} from "./post";
