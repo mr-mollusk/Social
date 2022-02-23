@@ -1,4 +1,42 @@
+@import "../../index.scss";
+
 .content {
     background-color: #14A788;
     width: 100%;
+    
+}
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    min-height: 100%;
+    &_names {
+        border-right: solid black 5px;
+        @include Roboto;
+        font-size: 20px;
+        padding: 20px;
+    }
+    &_item {
+        margin-bottom: 10px;
+    }
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px; 
+}
+
+.message {
+    @include Roboto;
+    font-size: 18px;
+}
+
+.Posts {
+    grid-area: Posts;
+    background-color: #ffff33;
+    padding: 15px;  
+    display: flex;
+    justify-content: flex-end;      
 }

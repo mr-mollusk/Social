@@ -1,7 +1,7 @@
 import SettingsUi from "./ui";
 
 const Settings = (props) => {
-    return <SettingsUi/>
-}
+    return <SettingsUi />;
+};
 
 export default Settings;
