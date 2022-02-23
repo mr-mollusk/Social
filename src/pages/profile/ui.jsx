@@ -1,4 +1,4 @@
-import { avatar_src, FriendsIcon } from "../../assets";
+import { avatar_src } from "../../assets";
 import {
     Avatar,
     Button,
@@ -9,7 +9,7 @@ import {
 } from "../../components";
 import s from "./styles.module.scss";
 
-const ProfilePageUi = ({ postsData, buttons }) => {
+const ProfilePageUi = ({ postsData }) => {
     return (
         <div className={s.Container}>
             <Avatar className={s.Avatar} img={avatar_src} />
