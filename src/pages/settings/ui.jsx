@@ -1,5 +1,5 @@
 const SettingsUi = (props) => {
-    return <div>News</div>
+    return <div>Settings</div>
 }
 
 export default SettingsUi;

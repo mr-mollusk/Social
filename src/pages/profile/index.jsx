@@ -1,7 +1,7 @@
 import ProfilePageUi from "./ui";
 
-const ProfilePage = ({ postsData }) => {
-    return <ProfilePageUi postsData={postsData} buttons={buttons} />;
+const ProfilePage = ({ profile }) => {
+    return <ProfilePageUi postsData={profile.postsData} />;
 };
 
 export default ProfilePage;
