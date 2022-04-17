@@ -1,7 +1,12 @@
+import { connect } from "react-redux";
 import ProfilePageUi from "./ui";
 
-const ProfilePage = ({ profile }) => {
-    return <ProfilePageUi postsData={profile.postsData} />;
-};
+const mapStateToProps = (state) => {
+    return {
+        profile: state.profile
+    }
+}
+
+const ProfilePage = connect(mapStateToProps)(ProfilePageUi);
 
 export default ProfilePage;

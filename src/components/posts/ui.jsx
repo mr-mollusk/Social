@@ -1,9 +1,9 @@
 import PostInput from "../postInput";
 import Button from "../button";
 
-const PostsUi = ({ className }) => {
+const PostsUi = () => {
     return (
-        <div className={className}>
+        <div>
             <PostInput />
         </div>
     );

@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
+import { Button } from "../../components";
 import s from "./styles.module.scss";
 
-const DialogsUi = ({ friends, messages }) => {
+const DialogsUi = ({ dialogs, onSendMessageClick, changeMessageText }) => {
+
+    
+    const onChangeMessageText = (e) => {
+        const text = e.target.value;
+        changeMessageText(text);
+    }
+
     return (
         <div className={s.content}>
             <div className={s.dialogs}>
                 <div className={s.dialogs_names}>
-                    {friends.map((friend) => (
+                    {dialogs.friends.map((friend) => (
                         <Link
                             key={friend.id}
                             className={s.nav_link}
@@ -17,9 +25,13 @@ const DialogsUi = ({ friends, messages }) => {
                     ))}
                 </div>
                 <div className={s.messages}>
-                    {messages.Artem.map((msg) => (
+                    {dialogs.messages.Artem.map((msg) => (
                         <div key={msg.id}>{msg.message}</div>
                     ))}
+                    <div className={s.send_area}>
+                        <textarea onChange={onChangeMessageText} value={dialogs.newMessageText} ></textarea>
+                        <Button text="Send" onClick={onSendMessageClick} />
+                    </div>
                 </div>
             </div>
         </div>

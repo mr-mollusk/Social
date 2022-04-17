@@ -43,3 +43,12 @@
     justify-content: flex-end;      
 }
 
+.send_area {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    textarea {
+        width: 90%;
+        resize: none;
+    }
+}

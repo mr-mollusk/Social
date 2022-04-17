@@ -9,7 +9,7 @@ import {
 } from "../../components";
 import s from "./styles.module.scss";
 
-const ProfilePageUi = ({ postsData }) => {
+const ProfilePageUi = ({ profile }) => {
     return (
         <div className={s.Container}>
             <Avatar className={s.Avatar} img={avatar_src} />
@@ -17,8 +17,7 @@ const ProfilePageUi = ({ postsData }) => {
             <Interaction className={s.Interaction} />
             <div className={s.Posts}>
                 <Posts />
-                <Button text="send" />
-                {postsData.map((post) => (
+                {profile.postsData.map((post) => (
                     <Post key={post.id} text={post.message} />
                 ))}
             </div>

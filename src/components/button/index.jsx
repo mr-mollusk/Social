@@ -12,9 +12,7 @@ const Button = ({
     const onClickHandler = useCallback(
         (e) => {
             e.preventDefault();
-            if (onClick) {
-                onClick(e);
-            }
+            onClick?.();
         },
         [onClick]
     );

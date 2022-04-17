@@ -1,16 +1,27 @@
-import { useCallback, useMemo, useState } from "react";
+import { connect } from "react-redux";
+import {
+    sendMessageCreator,
+    updateNewMessageCreator,
+} from "../../redux/reducers/dialogsReducer";
 import DialogsUi from "./ui";
 
-const Dialogs = (props) => {
-    const { dialogs, match } = props;
-    const {id} = match.params;
-    console.log(id);
-    return (
-        <DialogsUi
-            friends={dialogs.friends}
-            messages={dialogs.messages}
-        />
-    );
+
+const mapStateToProps = (state) => {
+    return {
+        dialogs: state.dialogs
+    };
 };
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSendMessageClick: () => {
+            dispatch(sendMessageCreator());
+        },
+        changeMessageText: (text) => {
+            dispatch(updateNewMessageCreator(text));
+        },
+    };
+};
+
+const Dialogs = connect(mapStateToProps, mapDispatchToProps)(DialogsUi);
 
 export default Dialogs;

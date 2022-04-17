@@ -1,8 +1,10 @@
 import PostsUi from "./ui";
 
-
-const Posts = ({className}) => {
-    return <PostsUi className={className}/>
-}
+const Posts = () => {
+    return (
+        <PostsUi
+        />
+    );
+};
 
 export default Posts;
